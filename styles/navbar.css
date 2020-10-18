@@ -1,0 +1,22 @@
+navbar{
+    display:flex;
+    background-color: black;
+}
+
+navbar a{
+    color:white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+navbar a:hover{
+    background-color: blue;
+    color:yellow;
+}
+
+@media (max-width: 600px){
+    navbar{
+        display:none;
+    }
+}

@@ -1,0 +1,12 @@
+header{
+    color:white;
+    background-color: red;
+    padding:50px;
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    a{
+      display: none;
+    }
+  }
