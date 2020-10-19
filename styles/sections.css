@@ -1,0 +1,53 @@
+.section1{
+    display:flex;
+}
+
+.section1 ol{
+    border: 1px solid;
+}
+
+.section li{
+    border-bottom: 1px solid;
+}
+
+.box-1{
+    flex:1;
+    padding: 10px;
+}
+
+.section2{
+    display:flex;
+}
+
+.box-2{
+    flex:1;
+    padding: 10px;
+}
+
+.box-2 img{
+    height: 150px;
+}
+
+.section3{
+    display:flex;
+}
+
+.box-3{
+    flex:1;
+    padding:10px;
+}
+
+.box-3 img{
+    height: 100px;
+}
+
+@media(max-width: 835px){
+    .notes{
+        margin:0px;
+    }
+
+    .section1, .section2, .section3{
+        display:flex;
+        flex-direction: column;
+    }
+}

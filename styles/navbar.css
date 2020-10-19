@@ -1,6 +1,7 @@
 navbar{
     display:flex;
     background-color: black;
+    padding: 10px;
 }
 
 navbar a{
@@ -8,14 +9,16 @@ navbar a{
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
+    font-weight: bold;
 }
 
 navbar a:hover{
-    background-color: blue;
-    color:yellow;
+    background-color:#34495E;
+    color:lightsteelblue;
+    font-weight: bold;
 }
 
-@media (max-width: 600px){
+@media (max-width: 835px){
     navbar{
         display:none;
     }

@@ -6,16 +6,22 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/sections.css">
     <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/footer.css">
     <script src="https://kit.fontawesome.com/06ae20ed13.js" crossorigin="anonymous"></script>
     <title>The Focus News - Home</title>
 </head>
 <body>
     <header>
-        <h1>The Focus News</h1>
-        <a href="#">
-            <i class="fas fa-bars"></i>
-        </a>
+        <div>
+            <h1>The Focus News</h1>
+        </div>
+        <div>
+            <a href="#">
+                <i class="fas fa-bars"></i>
+            </a>
+        </div>
     </header>
     <navbar>
         <div>
@@ -30,53 +36,223 @@
             <a href="#">Weather</a>
         </div>
     </navbar>
-    <section>
-        <article>
-            <h3>Nota1</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Id delectus consectetur sit laboriosam eius maiores laudantium cumque doloremque
-                vel aspernatur aut voluptatem sunt, temporibus rerum quo.
-                Architecto modi beatae blanditiis.
-            </p>
-            <hr>
-        </article>
-        <article>
-            <h3>Nota2</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Id delectus consectetur sit laboriosam eius maiores laudantium cumque doloremque
-                vel aspernatur aut voluptatem sunt, temporibus rerum quo.
-                Architecto modi beatae blanditiis.
-            </p>
-            <hr>
-        </article>
-    </section>
+    <div class="notes">
+        <section class="section1">
+            <div class="box-1">
+                <h2>Nota1</h2>
+                <img src="images/fire.jpg" class="img-change">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Id delectus consectetur sit laboriosam eius maiores laudantium cumque doloremque
+                    vel aspernatur aut voluptatem sunt, temporibus rerum quo.
+                    Architecto modi beatae blanditiis.
+                </p>
+            </div>
+            <div class="box-1">
+                <h2>Nota2</h2>
+                <img src="images/schools.jpg" class="img-change">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Id delectus consectetur sit laboriosam eius maiores laudantium cumque doloremque
+                    vel aspernatur aut voluptatem sunt, temporibus rerum quo.
+                    Architecto modi beatae blanditiis.
+                </p>
+            </div>
+            <div id="sidebar">
+                <h2>most read</h2>
+                <ol>
+                    <li>
+                        <a href="#">
+                            <p>
+                                From millionaire to sleeping on the street: he hired Maradona,
+                                promised the Argentine Disney and now he asks for alms
+                            </p>
+                            <img src="images/Millonaire.jpg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>
+                                Axel Kicillof announced what the requirements will be for the summer season
+                            </p>
+                            <img src="images/summer.jpg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>
+                                The exodus continues:
+                                Walmart negotiates the sale of the chain in Argentina and is one step away from
+                                leaving the country
+                            </p>
+                            <img src="images/walmart.jpg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <p>
+                            Dollar: what new measures will the Government announce to try to
+                            reduce the exchange rate gap
+                        </p>
+                        <img src="images/dolar.jpg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>
+                                These are the latest news from "Cyberpunk 2077", one of the great releases of November
+                            </p>
+                            <img src="images/cyberpunk.jpg">
+                        </a>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <hr>
+        <section class="section2">
+            <div class="box-2">
+                <h2>Nota3</h2>
+                <img src="images/Fly.jpg" class="img-change">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Id delectus consectetur sit laboriosam eius maiores laudantium cumque doloremque
+                    vel aspernatur aut voluptatem sunt, temporibus rerum quo.
+                    Architecto modi beatae blanditiis.
+                </p>
+            </div>
+            <div class="box-2">
+                <h2>Nota4</h2>
+                <img src="images/Military-exercises.jpg" class="img-change">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Id delectus consectetur sit laboriosam eius maiores laudantium cumque doloremque
+                    vel aspernatur aut voluptatem sunt, temporibus rerum quo.
+                    Architecto modi beatae blanditiis.
+                </p>
+            </div>
+            <div class="box-2">
+                <h2>Nota5</h2>
+                <img src="images/job-search.jpg" class="img-change">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Id delectus consectetur sit laboriosam eius maiores laudantium cumque doloremque
+                    vel aspernatur aut voluptatem sunt, temporibus rerum quo.
+                    Architecto modi beatae blanditiis.
+                </p>
+            </div>
+        </section>
+    </div>
+    <div class="notes">
+        <hr>
+        <section class="section3">
+            <div class="box-3">
+                <h2>Nota6</h2>
+                <img src="images/Fly.jpg" class="img-change">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Id delectus consectetur sit laboriosam eius maiores laudantium cumque doloremque
+                    vel aspernatur aut voluptatem sunt, temporibus rerum quo.
+                    Architecto modi beatae blanditiis.
+                </p>
+            </div>
+            <div class="box-3">
+                <h2>Nota7</h2>
+                <img src="images/Military-exercises.jpg" class="img-change">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Id delectus consectetur sit laboriosam eius maiores laudantium cumque doloremque
+                    vel aspernatur aut voluptatem sunt, temporibus rerum quo.
+                    Architecto modi beatae blanditiis.
+                </p>
+            </div>
+            <div class="box-3">
+                <h2>Nota8</h2>
+                <img src="images/job-search.jpg" class="img-change">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Id delectus consectetur sit laboriosam eius maiores laudantium cumque doloremque
+                    vel aspernatur aut voluptatem sunt, temporibus rerum quo.
+                    Architecto modi beatae blanditiis.
+                </p>
+            </div>
+            <div class="box-3">
+                <h2>Nota9</h2>
+                <img src="images/job-search.jpg" class="img-change">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Id delectus consectetur sit laboriosam eius maiores laudantium cumque doloremque
+                    vel aspernatur aut voluptatem sunt, temporibus rerum quo.
+                    Architecto modi beatae blanditiis.
+                </p>
+            </div>
+            <div class="box-3">
+                <a href="#">
+                    <h2 class="adjust-title">The first Argentine tennis player classified to the London Masters was confirmed</h2>
+                    <img src="images/tennis.jpg" class="img-change">
+                    <p>
+                        The country will have at least one representative of
+                        the country in the contest that brings together the best of the season
+                    </p>
+                </a>
+            </div>
+            <div class="box-3">
+                <a href="#">
+                    <h2>Robert Redford's son died</h2>
+                    <img src="images/Redford-sons.jpg" class="img-change">
+                    <p>
+                        Renowned activist and documentarian James Redford has passed away at the age of 58.
+                        The causes of his death are unknown.
+                    </p>
+                </a>
+            </div>
+        </section>
+    </div>
     <footer>
-        <h2>The Focus News</h2>
-        <ul>
-            <li>Most read</li>
-            <li>Sports</li>
-            <li>Cultural</li>
-            <li>Shows</li>
-            <li>Politics</li>
-        </ul>
         <hr>
         <p>&copy; 2020 The Focus News</p>
-        <ul>
-            <li>Contact Us</li>
-            <li>Work with us</li>
-            <li>Advertise</li>
-            <li>Ads</li>
-            <li>Privacy Policy</li>
-            <li>Terms of Service</li>
-            <li>Terms of Sale</li>
-            <li>Site Map</li>
-            <li>Help</li>
-            <li>Subscriptions</li>
-            <li>Facebook</li>
-            <li>Twitter</li>
-        </ul>
+        <hr>
+            <div class="footer-div">
+                <div>
+                    <a href="#">Contact Us</a>
+                </div>
+                <div>
+                    <a href="#">Work with us</a>
+                </div>
+                <div>
+                    <a href="#">Advertise</a>
+                </div>
+                <div>
+                    <a href="#">Ads</a>
+                </div>
+                <div>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div>
+                    <a href="#">Terms of Service</a>
+                </div>
+                <div>
+                    <a href="#">Terms of Sale</a>
+                </div>
+                <div>
+                    <a href="#">Site Map</a>
+                </div>
+                <div>
+                    <a href="#">Help</a>
+                </div>
+                <div>
+                    <a href="#">Subscriptions</a>
+                </div>
+                <div>
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
     </footer>
 </body>
 </html>

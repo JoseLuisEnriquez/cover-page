@@ -1,0 +1,29 @@
+footer{
+    background-color: #DC7633;
+    color:white;
+    font-weight: bold;
+    height: 200px;
+}
+
+footer p{
+    text-align: center;
+    font-weight: bold;
+}
+
+.footer-div{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 25px;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+footer div{
+    margin-top: 15px;
+}
+
+footer a{
+    color:white;
+}

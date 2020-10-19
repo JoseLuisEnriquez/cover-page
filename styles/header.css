@@ -1,12 +1,20 @@
 header{
     color:white;
-    background-color: red;
+    background-color:#DC7633;
     padding:50px;
     text-align: center;
 }
 
-@media (min-width: 600px) {
-    a{
+i{
+  color:white;
+}
+
+header div{
+  display:flex;
+}
+
+@media (min-width: 835px) {
+    header a{
       display: none;
     }
   }
