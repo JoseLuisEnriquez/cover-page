@@ -38,7 +38,7 @@
 }
 
 .box-3 img{
-    height: 100px;
+    height: 150px;
 }
 
 @media(max-width: 835px){
@@ -49,5 +49,9 @@
     .section1, .section2, .section3{
         display:flex;
         flex-direction: column;
+    }
+
+    .section2 img, .section3 img{
+        height: 250px;
     }
 }

@@ -13,6 +13,14 @@ header div{
   display:flex;
 }
 
+#title-container{
+  justify-content: center;
+}
+
+#burger-container{
+  justify-content: flex-end;
+}
+
 @media (min-width: 835px) {
     header a{
       display: none;
