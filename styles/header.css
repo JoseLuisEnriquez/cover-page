@@ -13,7 +13,7 @@ header div{
   display:flex;
 }
 
-#title-container{
+.title-container{
   justify-content: center;
 }
 
