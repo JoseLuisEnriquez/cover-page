@@ -37,14 +37,14 @@ h2{
 }
 
 #sidebar ol{
-    border-color:lightgray;
+    border-color:#E5E7E9;
     padding-right: 10px;
 }
 
 #sidebar li a{
     display: flex;
     border-bottom: 1px solid;
-    border-color:lightgray;
+    border-color:#E5E7E9;
     padding-top: 5px;
     padding-bottom: 5px;
 }

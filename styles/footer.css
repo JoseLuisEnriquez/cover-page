@@ -1,6 +1,6 @@
 footer{
     background-color: #DC7633;
-    color:white;
+    color:#FFF;
     font-weight: bold;
     height: 200px;
 }
@@ -25,5 +25,5 @@ footer div{
 }
 
 footer a{
-    color:white;
+    color:#FFF;
 }
