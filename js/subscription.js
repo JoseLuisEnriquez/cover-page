@@ -45,17 +45,23 @@ function validate_password() {
       passwordInputInvalid.innerHTML = "The password is invalid";
       passwordInputInvalid.style.display = "block";
       document.getElementById("password").classList.add("form-input-invalid");
-    } else if (str.search(/\d/) == -1) {
+    } else if (userPassword.search(/^\d/) == -1) {
       const passwordInputInvalid = document.getElementById("password-invalide");
       passwordInputInvalid.innerHTML = "The password is invalid";
       passwordInputInvalid.style.display = "block";
       document.getElementById("password").classList.add("form-input-invalid");
-    } else if (str.search(/[a-zA-Z]/) == -1) {
+    } else if (userPassword.search(/[^a-zA-Z]/) == -1) {
       const passwordInputInvalid = document.getElementById("password-invalide");
       passwordInputInvalid.innerHTML = "The password is invalid";
       passwordInputInvalid.style.display = "block";
       document.getElementById("password").classList.add("form-input-invalid");
-    } else if (str.search(/[^a-zA-Z0-9\!\@\#\$\%\^\&\*\(\)\_\+]/) != -1) {
+    } else if (userPassword.search(/[^A-Za-z\d]/) != -1) {
+      const passwordInputInvalid = document.getElementById("password-invalide");
+      passwordInputInvalid.innerHTML = "The password is valid";
+      passwordInputInvalid.style.display = "block";
+      document.getElementById("password").classList.add("form-input-invalid");
+    }
+    if(userPassword.indexOf(' ') == -1) {
       const passwordInputInvalid = document.getElementById("password-invalide");
       passwordInputInvalid.innerHTML = "The password is invalid";
       passwordInputInvalid.style.display = "block";
