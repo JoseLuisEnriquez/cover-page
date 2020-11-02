@@ -69,37 +69,43 @@
             </div>
             <div>
                 <label>Age:</label>
-                <input type="text" id="age" placeholder="Enter age">
+                <input type="text" id="age" placeholder="Enter age" onblur="validate_age()" onfocus="clear_error_validations('age-invalide')">
+                <span id="age-invalide"></span>
             </div>
         </div>
         <div class="user-info">
             <div>
                 <label>Telphone</label>
-                <input type="text" id="tel" placeholder="Enter number phone">
+                <input type="text" id="tel" placeholder="Enter number phone" onblur="validate_tel()" onfocus="clear_error_validations('tel-invalide')">
+                <span id="tel-invalide"></span>
             </div>
             <div>
                 <label>Address:</label>
-                <input type="text" id="address" placeholder="Enter address">
+                <input type="text" id="address" placeholder="Enter address" onblur="validate_address()" onfocus="clear_error_validations('address-invalide')">
+                <span id="address-invalide"></span>
             </div>
         </div>
         <div class="user-info">
             <div>
                 <label>City:</label>
-                <input type="text" id="city" placeholder="Enter city">
+                <input type="text" id="city" placeholder="Enter city" onblur="validate_city()" onfocus="clear_error_validations('city-invalide')">
+                <span id="city-invalide"></span>
             </div>
             <div>
                 <label>Postal Code:</label>
-                <input type="text" id="postal-code" placeholder="Enter postal code">
+                <input type="text" id="postal-code" placeholder="Enter postal code" onblur="validate_codpost()" onfocus="clear_error_validations('codpost-invalide')">
+                <span id="codpost-invalide"></span>
             </div>
         </div>
         <div class="user-info">
             <div>
                 <label>DNI:</label>
-                <input type="text" id="dni" placeholder="Enter DNI">
+                <input type="text" id="dni" placeholder="Enter DNI" onblur="validate_dni()" onfocus="clear_error_validations('dni-invalide')">
+                <span id="dni-invalide"></span>
             </div>
             <div></div>
         </div>
-            <input type="submit" id="button" value="Send">
+            <input type="submit" id="button" value="Send" onclick="send_form()">
     </form>
     <footer>
         <hr>
