@@ -12,14 +12,14 @@ function validate_name() {
       nameInputInvalid.innerHTML = "Name must be first and last name";
       nameInputInvalid.style.display = "block";
       document.getElementById("fname").classList.add("form-input-invalid");
-      eName = 1;
+      eName = true;
     }
     if(userName.indexOf(' ') == -1) {
       const nameInputInvalid = document.getElementById("name-invalide");
       nameInputInvalid.innerHTML = "Name must be first and last name";
       nameInputInvalid.style.display = "block";
       document.getElementById("fname").classList.add("form-input-invalid");
-      eName = 1;
+      eName = true;
     }
 }
 
@@ -32,14 +32,14 @@ function validate_email() {
     emailInputInvalid.innerHTML = "The email is invalid";
     emailInputInvalid.style.display = "block";
     document.getElementById("email").classList.add("form-input-invalid");
-    eEmail = 1;
+    eEmail = true;
   }
   if(!userEmail.includes('.com' || '.net' || '.org' || '.edu')) {
     const emailInputInvalid = document.getElementById("email-invalide");
     emailInputInvalid.innerHTML = "The email is invalid";
     emailInputInvalid.style.display = "block";
     document.getElementById("email").classList.add("form-input-invalid");
-    eEmail = 1;
+    eEmail = true;
   }
 }
 
@@ -48,19 +48,22 @@ var password = document.getElementById("password");
 function validate_password() {
   const userPassword = document.getElementById("password").value;
   const cantPassword = userPassword.length;
+  document.getElementById("rpassword").disabled = false;
     if (cantPassword < 8) {
       const passwordInputInvalid = document.getElementById("password-invalide");
       passwordInputInvalid.innerHTML = "The password is invalid";
       passwordInputInvalid.style.display = "block";
       document.getElementById("password").classList.add("form-input-invalid");
-      ePassword = 1;
+      ePassword = true;
+      document.getElementById("rpassword").disabled = true;
     }
     if(userPassword.indexOf(' ') != -1) {
       const passwordInputInvalid = document.getElementById("password-invalide");
       passwordInputInvalid.innerHTML = "The password is invalid";
       passwordInputInvalid.style.display = "block";
       document.getElementById("password").classList.add("form-input-invalid");
-      ePassword = 1;
+      ePassword = true;
+      document.getElementById("rpassword").disabled = true;
     }
     var valid = myReg.test(userPassword);
     var valid2 = myNumber.test(userPassword);
@@ -69,8 +72,22 @@ function validate_password() {
       passwordInputInvalid.innerHTML = "The password is invalid";
       passwordInputInvalid.style.display = "block";
       document.getElementById("password").classList.add("form-input-invalid");
-      ePassword = 1;
+      ePassword = true;
+      document.getElementById("rpassword").disabled = true;
     }
+}
+
+//Validate repear password
+var repeatPassword = document.getElementById("rpassword");
+function validate_repeat(){
+  const repPass = document.getElementById("rpassword").value;
+  var aPassword = document.getElementById("password").value;
+  if(repPass != aPassword){
+    const rpasswordInputInvalid = document.getElementById("rpassword-invalide");
+    rpasswordInputInvalid.innerHTML = "Passwords do not match";
+    rpasswordInputInvalid.style.display = "block";
+    document.getElementById("rpassword").classList.add("form-input-invalid");
+  }
 }
 
 //Validate Age
@@ -82,7 +99,7 @@ function validate_age(){
     ageInputInvalid.innerHTML = "Must be over 18";
     ageInputInvalid.style.display = "block";
     document.getElementById("age").classList.add("form-input-invalid");
-    eAge = 1;
+    eAge = true;
   }
   var onlyNumbers = myNumber.test(userAge);
   if (!onlyNumbers){
@@ -90,7 +107,7 @@ function validate_age(){
     ageInputInvalid.innerHTML = "Must be over 18";
     ageInputInvalid.style.display = "block";
     document.getElementById("age").classList.add("form-input-invalid");
-    eAge = 1;
+    eAge = true;
   }
 }
 
@@ -104,35 +121,35 @@ function validate_tel(){
     telInputInvalid.innerHTML = "The phone number is not valid";
     telInputInvalid.style.display = "block";
     document.getElementById("tel").classList.add("form-input-invalid");
-    eTel = 1;
+    eTel = true;
   }
   if(userTel.indexOf(' ') != -1) {
     const telInputInvalid = document.getElementById("tel-invalide");
     telInputInvalid.innerHTML = "The phone number is not valid";
     telInputInvalid.style.display = "block";
     document.getElementById("tel").classList.add("form-input-invalid");
-    eTel = 1;
+    eTel = true;
   }
   if(userTel.indexOf('-') != -1) {
     const telInputInvalid = document.getElementById("tel-invalide");
     telInputInvalid.innerHTML = "The phone number is not valid";
     telInputInvalid.style.display = "block";
     document.getElementById("tel").classList.add("form-input-invalid");
-    eTel = 1;
+    eTel = true;
   }
   if(userTel.indexOf('(') != -1) {
     const telInputInvalid = document.getElementById("tel-invalide");
     telInputInvalid.innerHTML = "The phone number is not valid";
     telInputInvalid.style.display = "block";
     document.getElementById("tel").classList.add("form-input-invalid");
-    eTel = 1;
+    eTel = true;
   }
   if(userTel.indexOf(')') != -1) {
     const telInputInvalid = document.getElementById("tel-invalide");
     telInputInvalid.innerHTML = "The phone number is not valid";
     telInputInvalid.style.display = "block";
     document.getElementById("tel").classList.add("form-input-invalid");
-    eTel = 1;
+    eTel = true;
   }
 }
 
@@ -146,14 +163,14 @@ function validate_address(){
     adrInputInvalid.innerHTML = "The address must be at least 5 characters";
     adrInputInvalid.style.display = "block";
     document.getElementById("address").classList.add("form-input-invalid");
-    eAdr = 1;
+    eAdr = true;
   }
   if (userAddress.indexOf(' ') == -1){
     const adrInputInvalid = document.getElementById("address-invalide");
     adrInputInvalid.innerHTML = "There needs to be a space";
     adrInputInvalid.style.display = "block";
     document.getElementById("address").classList.add("form-input-invalid");
-    eAdr = 1;
+    eAdr = true;
   }
   var street = myReg.test(userAddress);
   var streetNumber = myNumber.test(userAddress);
@@ -162,7 +179,7 @@ function validate_address(){
     adrInputInvalid.innerHTML = "The street or its number are not correct";
     adrInputInvalid.style.display = "block";
     document.getElementById("address").classList.add("form-input-invalid");
-    eAdr = 1;
+    eAdr = true;
   }
 }
 
@@ -176,7 +193,7 @@ function validate_city(){
     cityInputInvalid.innerHTML = "Enter the full name of the city";
     cityInputInvalid.style.display = "block";
     document.getElementById("city").classList.add("form-input-invalid");
-    eCity = 1;
+    eCity = true;
   }
 }
 
@@ -190,7 +207,7 @@ function validate_codpost(){
     cityInputInvalid.innerHTML = "The value doesn't correspond to a postal code";
     cityInputInvalid.style.display = "block";
     document.getElementById("postal-code").classList.add("form-input-invalid");
-    eCodPost = 1;
+    eCodPost = true;
   }
 }
 
@@ -204,7 +221,7 @@ function validate_dni(){
     dniInputInvalid.innerHTML = "The DNI must contain between 7 and 8 characters";
     dniInputInvalid.style.display = "block";
     document.getElementById("dni").classList.add("form-input-invalid");
-    eDni = 1;
+    eDni = true;
   }
   var onlyNumbers2 = myNumber.test(userDni);
   if (!onlyNumbers2){
@@ -212,61 +229,71 @@ function validate_dni(){
     dniInputInvalid.innerHTML = "Just enter numbers";
     dniInputInvalid.style.display = "block";
     document.getElementById("dni").classList.add("form-input-invalid");
-    eDni = 1;
+    eDni = true;
   }
 }
 
 //Button Send
 var btn = document.getElementById("button");
 function send_form(){
-  if(eName == 1){
-    eName = 0;
+  if(eName == true){
+    eName = false;
     return(alert('Name is not valid - The data has not been saved'));
   }
-  if(eEmail == 1){
-    eEmail = 0;
+  if(eEmail == true){
+    eEmail = false;
     return(alert('Email is not valid - The data has not been saved'));
   }
-  if(ePassword == 1){
-    ePassword = 0;
+  if(ePassword == true){
+    ePassword = false;
     return(alert('Password is not valid - The data has not been saved'))
   }
-  if(eAge == 1){
-    eAge = 0;
+  if(eAge == true){
+    eAge = false;
     return(alert('Age is not valid - The data has not been saved'))
   }
-  if(eTel == 1){
-    eTel = 0;
+  if(eTel == true){
+    eTel = false;
     return(alert('Telephone is not valid - The data has not been saved'))
   }
-  if(eAdr == 1){
-    eAdr = 0;
+  if(eAdr == true){
+    eAdr = false;
     return(alert('Address is not valid - The data has not been saved'))
   }
-  if(eCity == 1){
-    eCity = 0;
+  if(eCity == true){
+    eCity = false;
     return(alert('City is not valid - The data has not been saved'))
   }
-  if(eCodPost == 1){
-    eCodPost = 0;
+  if(eCodPost == true){
+    eCodPost = false;
     return(alert('Postal Code is not valid - The data has not been saved'))
   }
-  if(eDni == 1){
-    eDni = 0;
+  if(eDni == true){
+    eDni = false;
     return(alert('DNI is not valid - The data has not been saved'))
   }
-  return (alert(
-    `Name: ${userName}
-    Email: ${userEmail}
-    Password: ${userPassword}
-    Age: ${userAge}
-    Telephone: ${userTel}
-    Address: ${userAddress}
-    City: ${userCity}
-    Postal Code: ${cp}
-    DNI: ${userDni}
-    `
-    ));
+  var fieldName = document.getElementById('fname').value;
+  var fieldEmail = document.getElementById('email').value;
+  var fieldPassword = document.getElementById('password').value;
+  var fieldAge = document.getElementById('age').value;
+  var fieldTel = document.getElementById('tel').value;
+  var fieldAdr = document.getElementById('address').value;
+  var fieldCity = document.getElementById('city').value;
+  var fieldPc = document.getElementById('postal-code').value;
+  var fieldDni = document.getElementById('dni').value;
+  if(fieldName == "" && fieldEmail == "" && fieldPassword == "" && fieldAge == "" && fieldTel == ""
+  && fieldAdr == "" && fieldCity == "" && fieldPc == "" && fieldDni == ""){
+    alert('All fields must be complete');
+  } else {alert('Full Name: ' + fieldName +
+    ' Email: ' + fieldEmail +
+    ' Password: ' + fieldPassword +
+    ' Age: ' + fieldAge +
+    ' Telephone: '+ fieldTel +
+    ' Address: '+ fieldAdr +
+    ' City: '+ fieldCity +
+    ' Postal Code: ' + fieldPc +
+    ' DNI: ' + fieldDni);
+  }
 }
 
 //Limpiar

@@ -1,13 +1,54 @@
+h2{
+    text-decoration: underline;
+    padding:0px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+span{
+    color:#E74C3C;
+    font-style: italic;
+    font-weight: bold;
+}
+
+label{
+    font-weight: bold;
+}
+
+.input-style{
+    border-radius: 5px;
+}
+
+input[type=submit]{
+    background-color: #DC7633;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 220px;
+    height: 35px;
+}
+
+#submit-btn{
+    display:flex;
+    justify-content: center;
+}
+
 .user-info{
     display:flex;
     justify-content: space-around;
-    padding:5px;
-    margin-top:15px;
+    padding:10px;
+    margin-top:5px;
 }
 
 @media(max-width: 835px){
     form div{
         display:flex;
         flex-direction: column;
+        justify-content: center;
+    }
+    #submit-btn, .input-style{
+        width: 320px;
+        display: flex;
+        justify-content: center;
     }
 }
